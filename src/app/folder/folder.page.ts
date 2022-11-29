@@ -17,6 +17,7 @@ interface Item {
 })
 export class FolderPage implements OnInit {
   name: string = '';
+  city: string = '';
   items: any;
   public folder!: string;
 
@@ -28,10 +29,12 @@ export class FolderPage implements OnInit {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
 
     this.items = this.dataService.getList();
+    this.dataService.getTokenByCity();
   }
   addUser() {
     const token: IToken = {
-      name: this.name
+      name: this.name,
+      city: this.city
     }
     this.dataService.addNode(token)
   }

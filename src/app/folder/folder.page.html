@@ -19,10 +19,11 @@
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
   <input type="text" [(ngModel)]="name">
+  <input type="text" [(ngModel)]="city">
   <button (click)="addUser()">Add</button>
   <ul>
     <li *ngFor="let item of items | async">
-      {{ item.name }} <button (click)="deleteNode(item)">D</button>
+      {{ item.name }} |    {{ item.city }}  <button (click)="deleteNode(item)">D</button>
     </li>
   </ul>
 </ion-content>
