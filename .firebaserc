@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hateq-533d0": {
+      "hosting": {
+        "app": [
+          "hateq-533d0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hateq-533d0"
+  }
+}
